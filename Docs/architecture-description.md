@@ -10,6 +10,6 @@ This architecture represents a highly available web application deployed on AWS.
 - **Security Groups**: Configured to control traffic flow and ensure secure communication between components.
 
 ## Diagram
-![Architecture Diagram](./docs/architecture-diagram.png)
+![Architecture Diagram](./architecture-diagram.png)
 
 This setup ensures high availability, scalability, and security for the web application.
