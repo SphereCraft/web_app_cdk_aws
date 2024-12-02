@@ -16,7 +16,7 @@ export class VPCStack extends cdk.Stack {
             subnetConfiguration: [
                 {
                     subnetType: ec2.SubnetType.PUBLIC, // Public subnets for ALB and NAT Gateway
-                        name: 'PublicSubnet',
+                    name: 'PublicSubnet',
                     cidrMask: 24,
                 },
                 {
