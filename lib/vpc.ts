@@ -20,7 +20,7 @@ export class VPCStack extends cdk.Stack {
                     cidrMask: 24,
                 },
                 {
-                    subnetType: ec2.SubnetType.PRIVATE_ISOLATED, // Private subnets
+                    subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS, // Private subnets
                     name: 'PrivateSubnet',
                     cidrMask: 24,
                 },
