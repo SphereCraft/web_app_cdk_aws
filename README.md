@@ -7,7 +7,7 @@ This project demonstrates the deployment of a highly available and scalable web 
 ## Current Status
 - The project has been initialized with AWS CDK.
 - Next Steps:
-  - Design the architecture. - Done ![architecture](~/Documents/Projects/web_app_cdk_aws/Docs/architecture-description.md) 
+  - Design the architecture. - Done 
   - Implement the VPC stack.
 
 ## Objectives
