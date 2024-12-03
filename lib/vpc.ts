@@ -5,7 +5,7 @@ import { Construct } from 'constructs';
 // Making the VPC available from all files
 export class VPCStack extends cdk.Stack {
     public readonly vpc: ec2.Vpc;
-    
+
     // calling the constructor
     constructor(scope: Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
@@ -16,7 +16,7 @@ export class VPCStack extends cdk.Stack {
             subnetConfiguration: [
                 {
                     subnetType: ec2.SubnetType.PUBLIC, // Public subnets for ALB and NAT Gateway
-                    name: 'PublicSubnet',
+                        name: 'PublicSubnet',
                     cidrMask: 24,
                 },
                 {
@@ -27,6 +27,9 @@ export class VPCStack extends cdk.Stack {
             ],
         });
 
-
+        new cdk.CfnOutput(this, 'VpcId', {
+            value: this.vpc.vpcId,
+            description: 'The VPC ID'
+        });
     }
 }
