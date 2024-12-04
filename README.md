@@ -8,7 +8,13 @@ This project demonstrates the deployment of a highly available and scalable web 
 - The project has been initialized with AWS CDK.
 - Next Steps:
   - Design the architecture. - Done 
-  - Implement the VPC stack.
+  - Implement the VPC stack. - Done
+  - Add EC2 Stack Properties - Done
+  - Add EC2 Instance file    - Done
+  - Implement ASG
+  - Implement Security Group
+  - Implement ALB 
+  - Add S3 Bucket 
 
 ## Objectives
 - Create a VPC with public and private subnets across two Availability Zones.
