@@ -24,12 +24,12 @@ This project demonstrates the deployment of a highly available and scalable web 
 
 ## Technologies
 - **AWS CDK** (Infrastructure as Code)
-- **TypeScript**
+- **Typescript**
 - AWS Services: VPC, EC2, ALB, Auto Scaling, S3
 
-## Getting Started
-1. Clone the repository.
-2. Initialize the AWS CDK project with:
-   ```bash
-   cdk init app --language=typescript
+## Progress
+- Creating modular files for simple and re useable file system
+- Created VPC file and export for use throughout the project
+- Created separate EC2 Stack props file for re usability
+- Created EC2 file for a standard t3.medium (can change after discussions with client)
 
