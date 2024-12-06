@@ -11,9 +11,9 @@ This project demonstrates the deployment of a highly available and scalable web 
   - Implement the VPC stack. - Done
   - Add EC2 Stack Properties - Done
   - Add EC2 Instance file    - Done
-  - Implement ASG
+  - Implement ASG            - Done
   - Implement Security Group
-  - Implement ALB 
+  - Implement ALB            - Done
   - Add S3 Bucket 
 
 ## Objectives
@@ -32,4 +32,5 @@ This project demonstrates the deployment of a highly available and scalable web 
 - Created VPC file and export for use throughout the project
 - Created separate EC2 Stack props file for re usability
 - Created EC2 file for a standard t3.medium (can change after discussions with client)
+- Created ASG and ALB, this took sometime to work out, but the logic is there and understood.
 
