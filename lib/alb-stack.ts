@@ -1,9 +1,7 @@
 import * as elbv2 from 'aws-cdk-lib/aws-elasticloadbalancingv2';
-import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { ALBStackProps } from './alb-stack-props';
-import { Listener } from 'aws-cdk-lib/aws-globalaccelerator';
 
 export class ALBStack extends cdk.Stack {
     public readonly targetGroup: elbv2.ApplicationTargetGroup;
@@ -30,7 +28,6 @@ export class ALBStack extends cdk.Stack {
         listener.addTargetGroups('DefaultTargetGroup', {
             targetGroups: [this.targetGroup],
         });
-        
             
         new cdk.CfnOutput(this, 'ALBDnsName', {
             value: alb.loadBalancerDnsName,
