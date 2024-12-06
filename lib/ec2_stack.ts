@@ -12,6 +12,13 @@ export class EC2Stack extends cdk.Stack {
             machineImage: ec2.MachineImage.latestAmazonLinux2(),
             vpc: props.vpc,
             
-        })
+        });
+
+        new cdk.CfnOutput(this, 'EC2Id', {
+            value: ec2Instance.instanceId,
+            description: 'The EC2 ID'
+        });
+
+        cdk.Tags.of(ec2Instance).add('Name', 'EC2Instance');
     }
 }
