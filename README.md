@@ -34,3 +34,12 @@ This project demonstrates the deployment of a highly available and scalable web 
 - Created EC2 file for a standard t3.medium (can change after discussions with client)
 - Created ASG and ALB, this took sometime to work out, but the logic is there and understood.
 
+## Conclusion
+This project was the first of many that i intend to build, and although this is a relativly simple project, it was a massive
+learning curve for me.  
+I did use chatGPT to help. Was this a good or bad thing?  
+Well even as a very new Cloud Engineer, I found out that AI can actully be more of a hinderance that a help. Ok, yes, chatGPT
+helped me with a better understanding for file structure, syntax and even definations of some properties that i wasnt awear off,
+but honestly, ChatGPT made things more complicated that it needed to be. I actully ended up just using the documentation the AWS
+have to check what ChatGPT was saying. All in all, this was a great starter project for me and one that i can refer to in 
+the future to help with other projects. My main take from this, have confidence in what I have learned and use AI in a different way.
