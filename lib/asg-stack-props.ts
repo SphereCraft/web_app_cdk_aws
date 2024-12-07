@@ -4,5 +4,6 @@ import * as elbv2 from 'aws-cdk-lib/aws-elasticloadbalancingv2';
 
 export interface ASGStackProps extends cdk.StackProps {
     vpc: ec2.Vpc
+    albSecurityGroup: ec2.SecurityGroup;
     targetGroup: elbv2.ApplicationTargetGroup;
 }

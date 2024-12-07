@@ -8,6 +8,18 @@ export class ASGStack extends cdk.Stack {
     constructor(scope: Construct, id: string, props: ASGStackProps){
         super (scope, id, props);
 
+        const asgSecurityGroup = new ec2.SecurityGroup(this, 'ASGSecurityGroup', {
+            vpc: props.vpc,
+            allowAllOutbound: true,
+            description: 'Security group for the Auto Scaling Group',
+        });
+
+        asgSecurityGroup.addIngressRule(
+            ec2.Peer.securityGroupId(props.albSecurityGroup.securityGroupId),
+            ec2.Port.tcp(80),
+            'Allow traffic from the ALB'
+        );
+
         const asg = new autoscaling.AutoScalingGroup(this, 'ASG', {
             vpc: props.vpc,
             instanceType: new ec2.InstanceType('t3.medium'),
@@ -16,6 +28,7 @@ export class ASGStack extends cdk.Stack {
             maxCapacity: 5,
             desiredCapacity: 2,
             vpcSubnets: { subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS },
+            securityGroup: asgSecurityGroup,
         });
         
         asg.attachToApplicationTargetGroup(props.targetGroup);
